@@ -6,8 +6,7 @@ RUN apt-get update && apt-get install -qqy \
   libpng12-dev \
   libjpeg-dev \
   libpng-dev \
-  cron curl netcat-openbsd \
-&& AUTO_UPGRADE=1 curl https://get.acme.sh | sh
+  cron curl netcat-openbsd
 
 RUN a2enmod headers rewrite ssl
 RUN docker-php-ext-install iconv mcrypt \
@@ -26,9 +25,11 @@ RUN docker-php-ext-install iconv mcrypt \
 && docker-php-ext-enable opcache gd \
 && docker-php-source delete
 
+
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
 
 CMD ["/run.sh"]
+
 
 
