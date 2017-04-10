@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install -qqy \
   libpng-dev \
   cron curl netcat-openbsd
 
+RUN echo "IncludeOptional /conf/*.conf" >>/etc/apache2/apache2.conf
+
 RUN a2enmod headers rewrite ssl
 RUN docker-php-ext-install iconv mcrypt \
 && docker-php-ext-configure gd \
