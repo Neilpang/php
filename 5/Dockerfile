@@ -30,6 +30,6 @@ RUN docker-php-ext-install iconv mcrypt \
 
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
-
+RUN mkdir -p /conf
 CMD ["/run.sh"]
 
