@@ -13,4 +13,6 @@
 && cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled \
 && service apache2 stop
 
+chown -R www-data:www-data /var/www/html
+
 apache2-foreground
