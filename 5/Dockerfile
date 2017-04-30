@@ -31,5 +31,6 @@ RUN docker-php-ext-install iconv mcrypt \
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
 RUN mkdir -p /conf
+RUN usermod -u 1000 www-data
 CMD ["/run.sh"]
 
