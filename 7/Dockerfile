@@ -32,6 +32,8 @@ ADD run.sh /run.sh
 RUN chmod +x /run.sh
 RUN mkdir -p /conf
 
+VOLUME /conf
+
 CMD ["/run.sh"]
 
 
