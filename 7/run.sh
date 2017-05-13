@@ -2,7 +2,7 @@
 
 [ "$SSL_HOST_NAMES" ] \
 && service apache2 start \
-&& curl https://get.acme.sh | sh \
+&& LE_CONFIG_HOME=/acme.sh curl https://get.acme.sh | sh \
 && /root/.acme.sh/acme.sh --issue \
 --auto-upgrade \
 -d "$SSL_HOST_NAMES" \

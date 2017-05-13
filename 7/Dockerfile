@@ -34,6 +34,7 @@ RUN chmod +x /run.sh
 RUN mkdir -p /conf
 
 VOLUME /conf
+VOLUME /acme.sh
 
 CMD ["/run.sh"]
 
