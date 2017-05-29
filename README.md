@@ -1,3 +1,4 @@
+
 # php
 
 php with apache, and mysql connector
@@ -32,7 +33,7 @@ docker run --rm -itd  \
   --name web \
   -p 80:80 \
   -p 443:443 \
-  -e SSL_HOST_NAMES=example.com,www.sellmi.com \
+  -e SSL_HOST_NAMES=example.com,www.example.com \
   neilpang/php:5
 ```
 
