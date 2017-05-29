@@ -36,5 +36,7 @@ RUN mkdir -p /conf
 VOLUME /conf
 VOLUME /acme.sh
 
+EXPOSE 443
+
 CMD ["/run.sh"]
 
