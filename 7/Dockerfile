@@ -28,6 +28,10 @@ RUN docker-php-ext-install iconv mcrypt \
 && docker-php-ext-enable opcache gd \
 && docker-php-source delete
 
+RUN echo 'memory_limit = 1024M' >> /usr/local/etc/php/conf.d/php.ini \
+  && echo 'post_max_size = 2048M' >> /usr/local/etc/php/conf.d/php.ini \
+  && echo 'upload_max_filesize = 2048M' >> /usr/local/etc/php/conf.d/php.ini \
+  && echo 'max_execution_time = 180' >> /usr/local/etc/php/conf.d/php.ini
 
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
