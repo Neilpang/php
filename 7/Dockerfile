@@ -3,7 +3,7 @@ RUN apt-get update && apt-get install -qqy \
   libpng-dev \
   libfreetype6-dev \
   libmcrypt-dev \
-  libpng12-dev \
+  libpng-dev \
   libjpeg-dev \
   libpng-dev \
   cron curl netcat-openbsd \
