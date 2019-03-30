@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -qqy \
 RUN echo "IncludeOptional /conf/*.conf" >>/etc/apache2/apache2.conf
 
 RUN a2enmod headers rewrite ssl
-RUN docker-php-ext-install iconv mcrypt \
+RUN pecl install mcrypt-1.0.2 && docker-php-ext-enable mcrypt
+RUN docker-php-ext-install iconv  \
 && docker-php-ext-configure gd \
   --enable-gd-native-ttf \
   --with-freetype-dir=/usr/include/freetype2 \
