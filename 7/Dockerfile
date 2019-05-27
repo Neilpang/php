@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -qqy \
   libpng-dev \
   libjpeg-dev \
   libpng-dev \
-  cron curl netcat-openbsd \
+  cron curl netcat-openbsd git zip \
   && apt-get -y autoremove && apt-get clean all && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN echo "IncludeOptional /conf/*.conf" >>/etc/apache2/apache2.conf
